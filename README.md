@@ -42,7 +42,7 @@ Mitra Personal Assistant is a console-based virtual assistant developed in C++, 
 - Execution: Mitra performs the requested task and provides both text and voice-based feedback.
 - Continuous Loop: The assistant remains active and awaits further commands.
 
-![SVG Image](./Flow-chart.svg)
+![SVG Image](./flow-chart.svg)
 ---
 
 ## Contributors:
