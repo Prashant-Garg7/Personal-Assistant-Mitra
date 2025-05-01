@@ -1,38 +1,60 @@
-# Personal-Assistant-Mitra-in-C++
+# 🤖 Mitra – Your Personal Assistant (C++ Console App)
 
-### Objective:
-Mitra Personal Assistant is a console-based virtual assistant developed in C++, designed to perform system-level tasks and automate routine operations on a Windows OS. The assistant enables users to interact with their system efficiently using text-based commands, reducing manual effort and enhancing productivity.
-
----
-
-## Features:
-
-### **System Interaction:**
-- It can open commonly used applications such as Notepad, Microsoft Word, Calculator, Ms Paint, File Manager and Task Manager providing quick access to essential tools.
-### Web Navigation: 
-- Users can launch web browsers and directly access popular websites like Google, YouTube, and Gmail, Spotify, JIIT Webportal and E-Commerce websites with simple commands.
-### Media Control: 
-- The assistant can open the default music directory to play songs effortlessly.
-### Utility Functions:
-- It can display the current date and time, open the camera, and execute shutdown/restart commands for system management.
-### Ask Anything:
-- Users can ask any general question, and the assistant will redirect them to Google Search for an instant answer.
-### Open Any Website:
-- It allows users to open any website by entering the URL.
-### Speech Output:
-- It integrates eSpeak, allowing the assistant to speak the responses for a more interactive experience.
-### Weather Updates:
-- Mitra can fetch and display the current weather by redirecting the user to a weather service
-
+**Mitra** is a smart, console-based personal assistant developed in **C++**, designed to automate routine tasks and enhance productivity on **Windows OS**. From opening your favorite apps and websites to fetching the weather and speaking responses – Mitra does it all through simple text commands!
 
 ---
 
-## Approach:
-### **File Handling:** Used to store and retrieve data, such as maintaining logs of executed commands.
-### System Calls (Windows API): The assistant interacts with the operating system using functions like system(), allowing it to open applications, websites, and manage system tasks.
-### String Manipulation: Processes and analyzes user input to match it with predefined commands.(strcmp)
-### Conditional Statements & Loops: Used for command execution flow and keeping the assistant running in a loop.(if-else statement)
-### External Library Integration (eSpeak): Enables text-to-speech conversion, making the assistant capable of voice responses.
+## 🌟 Key Features
+
+### 🔧 System Interaction
+- Open essential Windows apps like:
+  - Notepad
+  - Microsoft Word
+  - Calculator
+  - MS Paint
+  - File Explorer
+  - Task Manager
+
+### 🌐 Web Navigation
+- Launch browsers and access popular websites:
+  - Google
+  - YouTube
+  - Gmail
+  - Spotify
+  - JIIT Web Portal
+  - E-Commerce websites
+
+### 🎵 Media Control
+- Play music from the default music directory.
+
+### 🛠️ Utility Functions
+- Show **current date & time**
+- Open **camera**
+- Execute **shutdown** or **restart** commands
+
+### ❓ Ask Anything
+- Redirects general questions to **Google Search**
+
+### 🌍 Open Any Website
+- Enter any URL to launch it directly
+
+### 🗣️ Speech Output (eSpeak)
+- Integrates **eSpeak** for text-to-speech capabilities
+
+### 🌦️ Weather Updates
+- Opens a weather website to show the current forecast
+
+---
+
+## ⚙️ Tech Stack & Approach
+
+| Component               | Description |
+|------------------------|-------------|
+| **File Handling**       | Logs and retrieves executed commands |
+| **Windows System Calls**| Uses `system()` to interact with OS features |
+| **String Manipulation** | Uses `strcmp()` to match user input |
+| **Control Flow**        | Loops and `if-else` statements manage task execution |
+| **eSpeak Integration**  | Adds voice-based feedback with text-to-speech |
 
 ---
 ### Flow Chart:
@@ -51,3 +73,18 @@ Mitra Personal Assistant is a console-based virtual assistant developed in C++, 
 - **Prashant Kumar Garg**
 - **Kavya Singhal**
 - **Krish Mehra**
+
+## 🔁 Workflow
+
+```mermaid
+graph TD
+    A[Start Mitra Assistant] --> B[Display Greeting & Commands]
+    B --> C[User Input]
+    C --> D{Match Command?}
+    D -->|Yes| E[Execute Task]
+    E --> F[Provide Text & Voice Feedback]
+    F --> B
+    D -->|No| G[Search on Google]
+    G --> F
+
+
