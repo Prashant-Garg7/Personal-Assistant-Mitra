@@ -78,7 +78,7 @@
 
 ```mermaid
 graph TD
-    A[Start Mitra Assistant] --> B[Display Greeting & Commands]
+    A[Start Mitra Assistant] --> B[Show Greeting & Commands]
     B --> C[User Input]
     C --> D{Match Command?}
     D -->|Yes| E[Execute Task]
