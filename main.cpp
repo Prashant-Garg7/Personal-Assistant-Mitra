@@ -6,7 +6,7 @@
                Started project : 15 February 2025
                Platform        : WINDOWS
                IDE used        : VS CODE
-               Last Modified   : 15/02/2025
+               Last Modified   : 02/05/2025
                Total Code      : 600+ LINES
  ----------------------------------------s------------------------------------
 */
@@ -356,13 +356,22 @@ int main()
                 }
                 
                 else if(strcmp(ch, "open flipkart") == 0){
-                    cout<<"openining flipkart....."<<endl;
-                    string phrase = "opening flipkart";
+                    cout << "What do you want to search on Flipkart? ";
+                    string query;
+                    getline(cin >> ws, query); 
+                    cout << "Opening Flipkart and searching for: " << query << "..." << endl;
+                    string phrase = "Searching for " + query + " on Flipkart";
                     string command = "espeak \"" + phrase + "\"";
-                    const char *charCommand = command.c_str();
-                    system(charCommand);
-                    system("start https://www.flipkart.com");
+                    system(command.c_str());
+                    // Replace spaces with '+' for URL encoding
+                    for (int i = 0; i < query.length(); i++) {
+                        if (query[i] == ' ')
+                            query[i] = '+';
+                    }
+                    string url = "start https://www.flipkart.com/search?q=" + query;
+                    system(url.c_str());
                 }
+                
                 else if(strcmp(ch, "open netflix") == 0){
                     cout<<"openining netflix....."<<endl;
                     string phrase = "opening netflix";
@@ -515,6 +524,14 @@ int main()
                     string res=s1 + space2add(ch);
                     const char *comSong=res.c_str();
                     system(comSong);
+                }
+                else if(strcmp(ch, "open project") == 0){
+                    cout<<"openining project github....."<<endl;
+                    string phrase = "opening github";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start https://github.com/Prashant-Garg7/Personal-Assistant-Mitra");
                 }
 
                 // else if(strcmp("shut down",ch) == 0){
