@@ -116,6 +116,8 @@ void showMenu() {
     cout << "Play Favorite Song: play my favorite song" << endl;
     cout << "Close Chrome: close chrome browser" << endl;
     cout << "Close Brave: close brave browser" << endl;
+    cout << "open Fileserver: open fileserver" << endl;
+    cout << "open camera: open camera" << endl;
     cout << "Exit: bye, stop, exit" << endl;
     cout << "=======================================\n";
 }
@@ -533,6 +535,26 @@ int main()
                     system(charCommand);
                     system("start https://github.com/Prashant-Garg7/Personal-Assistant-Mitra");
                 }
+                else if(strcmp(ch, "open camera") == 0){
+                    cout << "opening camera..." << endl;
+                    string phrase = "opening camera";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start microsoft.windows.camera:");
+                }
+
+                else if(strcmp(ch, "open fileserver") == 0){
+                    cout << "opening file server..." << endl;
+                    string phrase = "opening file server";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                
+                    system("start \"\" \"\\\\fileserver2\\Study Material\\Computer Science & IT\\Even Sem 2025\\2nd Sem\\SDF-2 lab\"");
+                }
+                
+                
 
                 // else if(strcmp("shut down",ch) == 0){
                 //     cout<<"Are You Sure You Wanna Shut Down your pc Press 1 for it Otherwise 0?"<<endl;
