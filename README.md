@@ -69,10 +69,7 @@
 ### User Interface using ASCII ART:
 ![PNG Image](./robot.png)
 ---
-## Contributors:
-- **Prashant Kumar Garg**
-- **Kavya Singhal**
-- **Krish Mehra**
+
 
 ## 🔁 Workflow
 
